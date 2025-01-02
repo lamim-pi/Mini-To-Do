@@ -1,0 +1,37 @@
+li = []
+
+boolean = True
+
+while boolean:
+    def add_trisk():
+        add_trisk_input = input("Inter your trisk : ")
+        li.append(add_trisk_input)
+    def show_trisk():
+        if li == []:
+            print("trisk list is emply")
+        else:
+            print('\n')
+            for x in range(len(li)):
+                print(f"          {x+1}. {li[x]}\n")
+            print('\n')
+    def remove_trisk():
+        remove_trisk_input = input("Your Trisk name : ")
+        print("trisk list emply".title()) if li == [] else li.remove(remove_trisk_input)
+    def manu():
+        print("1 . add trisk\n".title())
+        print("2 . show trisk\n".title())
+        print("3 . remove trisk\n".title())
+        print("4 . exit\n".capitalize())
+    manu()
+    x = input("1/2/3 : ")
+    
+    if x == "1":
+        add_trisk()
+    if x == "2":
+        show_trisk()
+    elif x == "3":
+        remove_trisk()
+    elif x == "4":
+        boolean = False
+    else:
+    	print("invalid input !")
